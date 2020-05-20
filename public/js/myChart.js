@@ -14,12 +14,12 @@ var basicWine = [
 ];
 
 var drink = [
-    {name:"冬瓜茶",sour:1,sweet:7,hot:0},
+    {name:"冬瓜茶",sour:1,sweet:7,hot:-2},
     {name:"檸檬汁",sour:7,sweet:3,hot:0},
     {name:"蔓越莓汁",sour:5,sweet:5,hot:0},
-    {name:"蘇打水",sour:0,sweet:0,hot:1},
+    {name:"蘇打水",sour:0,sweet:0,hot:-3},
     {name:"柳橙汁",sour:4,sweet:6,hot:0},
-    {name:"可樂",sour:1,sweet:6,hot:2},
+    {name:"可樂",sour:1,sweet:6,hot:-1},
 ];
 
 var ChartData = {
