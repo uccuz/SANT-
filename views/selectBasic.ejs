@@ -1,0 +1,38 @@
+<%- include('partials/header'); -%>
+
+<header class="jumbotron text-center">
+    <div class="container">
+        <h2 class="display-4">SANTÉ</h2>
+        <p class="lead">Cocktail Machine</p>
+        <a href="/" class="btn btn-danger">返回</a>
+    </div>              
+</header>
+
+<section id="gallery">
+    <div class="container">
+        <h2>Step1：選擇基底</h2>
+        <br>
+        <div class="row">
+            <% basicWine.forEach(function(basicWine){ %>                               
+                <div class="col-lg-4 mb-4 col-xs-6">
+                    <div class="card">
+                        <img src="<%= basicWine.image %>" class="card-img-top" alt="" height="250px">
+                        <div class="card-body">
+                            <h5 class="card-title"><%= basicWine.name %></h5>
+                            <p class="card-text"><%= basicWine.content %></p>
+                            <form action="/selectDrink" method="GET">
+                                <button class="btn btn-outline-success btn-sm wine_btn" data-id="<%= basicWine.id %>">選擇基底</button>
+                            </form> 
+                        </div>
+                    </div>
+                </div>
+            <% }); %>      
+    </div>        
+</section>
+
+
+
+
+
+
+<%- include('partials/footer'); -%>

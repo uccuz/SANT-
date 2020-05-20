@@ -1,0 +1,38 @@
+<%- include('partials/header'); -%>
+
+<header class="jumbotron text-center">
+    <div class="container">
+        <h2 class="display-4">SANTÉ</h2>
+        <p class="lead">Cocktail Machine</p>
+        <a href="/selectBasic" class="btn btn-danger">返回</a>
+    </div>
+</header>
+
+<section id="gallery">
+    <div class="container">
+        <h2>Step2：選擇飲料</h2>
+        <br>
+        <div class="row">           
+            <% drink.forEach(function(drink){ %>                               
+                <div class="col-lg-4 mb-4 col-xs-6">
+                    <div class="card" >
+                        <img src="<%= drink.image %>" class="card-img-top" alt="" height="250px">
+                        <div class="card-body">
+                            <h5 class="card-title"><%= drink.name %></h5>
+                            <p class="card-text"><%= drink.content %></p>
+                            <form action="/finishBuy" method="GET">
+                                <button class="btn btn-outline-success btn-sm drink_btn" data-id="<%= drink.id %>">選擇飲料</button>
+                            </form>                            
+                        </div>
+                    </div>
+                </div>
+            <% }); %>      
+    </div>        
+</section>
+
+
+
+
+
+
+<%- include('partials/footer'); -%>

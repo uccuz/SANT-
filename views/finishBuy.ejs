@@ -1,0 +1,30 @@
+<%- include('partials/header'); -%>
+
+<header class="jumbotron text-center">
+    <div class="container">
+        <h2 class="display-4">SANTÉ</h2>
+        <p class="lead">Cocktail Machine</p>
+        <a href="/" class="btn btn-danger">回到首頁</a>
+    </div>              
+</header>
+<section id="gallery">
+    <div class="container">
+        <h3 id="bartending">你的調酒：</h3>
+        <br>
+        <canvas id="chart" width="600" height="300"></canvas>
+        <br>
+        <div class="text-center">
+            <a href="/QRCode" class="btn btn-success">前往結帳</a>
+        </div>       
+    </div>        
+</section>
+
+
+
+
+
+
+<script type="text/javascript" src="/js/myChart.js"></script>
+
+
+<%- include('partials/footer'); -%>
